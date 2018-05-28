@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/button.css"></link>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        background:
+  radial-gradient(circle, transparent 20%, slategray 20%,
+    slategray 80%, transparent 80%, transparent),
+  radial-gradient(circle, transparent 20%, slategray 20%,
+    slategray 80%, transparent 80%, transparent) 50px 50px,
+  linear-gradient(#A8B1BB 8px, transparent 8px) 0 -4px,
+  linear-gradient(90deg, #A8B1BB 8px, transparent 8px) -4px 0;
+background-color: slategray;
+background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+    }
+    .card {
+            box-shadow: rgb(51, 97, 198);;
+            transition: 0.3s;
+            width: 30%;
+            border-radius:25px;
+            align-content: center;
+            margin-left: 630px;
+            margin-bottom: 50px;
+            padding-top : 30px;
+             padding-bottom : 40px;
+          }
+
+          .card:hover {
+            box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+          }
+    </style>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <br><br><br>
+        <br>
+        <br><br>
+    <div class="card">
+<h1 style="color:Tomato;"><center>Welcome</center></h1>
+<h1 style="color:Tomato;"><center>to</center></h1>
+<h1 style="color:Tomato;"><center>AP Power lifting<center></h1><br><br><br><br><br>
+<form method="POST" action="/admin"><center><button class="button" ng-click="ADMIN LOGIN()"  id="myButton"><span>ADMIN LOGIN</span></button></center><br><br><br><br><br></form>
+<form method="POST" action="/user"><center><button class="button" id="b" ng-click="USER LOGIN()"><span>USER &nbsp; LOGIN</span></button></center></form>
+</div>
+</body>
+<script>
+    document.querySelector('.button').onmousemove = (e) => {
+
+	const x = e.pageX - e.target.offsetLeft
+	const y = e.pageY - e.target.offsetTop
+
+	e.target.style.setProperty('--x', `${ x }px`)
+	e.target.style.setProperty('--y', `${ y }px`)
+	
+}
+document.querySelector('#b').onmousemove = (e) => {
+
+const x = e.pageX - e.target.offsetLeft
+const y = e.pageY - e.target.offsetTop
+
+e.target.style.setProperty('--x', `${ x }px`)
+e.target.style.setProperty('--y', `${ y }px`)
+
+}
+</script>
+</html>

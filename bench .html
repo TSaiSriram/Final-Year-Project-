@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="cards.css">
+<link rel="stylesheet" href="toolge.css">
+</head>
+<table>
+  <tr>
+    <td>
+      <li>
+        <div class="layerOne" name="cadsc" id="devd1">
+          <h1>
+            <b>Squat</b>
+          </h1>
+          <h2>1 st Attempt</h2>
+          <h1>200</h1>
+          <div class="box">
+            <br>
+            <input class="type-checkbox" id="toogle1" type="checkbox" name="name" onchange="onChange()" checked>
+            <label class="estado" for="toogle1">
+              <span class="aprobado">
+                <h2>Pass</h2>
+              </span>
+              <span class="desaprobado">
+                <h2>Fail</h2>
+              </span>
+            </label>
+            </input>
+          </div>
+        </div>
+      </li>
+    </td>
+    <td>
+      <input name="b2" type="text">
+    </td>
+    <td>
+      <li>
+        <div class="layerOne" name="cadsc" id="devs2">
+          <h1>
+            <b>Squat</b>
+          </h1>
+          <h2>2nd Attempt</h2>
+          <h1>200</h1>
+          <div class="box">
+            <br>
+            <input class="type-checkbox" id="toogle2" type="checkbox" name="name" onchange="onChange()" checked>
+            <label class="estado" for="toogle2">
+              <span class="aprobado">
+                <h2>Pass</h2>
+              </span>
+              <span class="desaprobado">
+                <h2>Fail</h2>
+              </span>
+            </label>
+            </input>
+          </div>
+        </div>
+      </li>
+    </td>
+    <td>
+      <input name="b3" type="text">
+    </td>
+    <td>
+      <li>
+        <div class="layerOne" name="cadsc"  id="devs3">
+          <h1>
+            <b>Squat</b>
+          </h1>
+          <h2>3 rd Attempt</h2>
+          <h1>200</h1>
+          <div class="box">
+            <br>
+            <input class="type-checkbox" id="toogle3" type="checkbox" name="name" onchange="onChange()" checked>
+            <label class="estado" for="toogle3">
+              <span class="aprobado">
+                <h2>Pass</h2>
+              </span>
+              <span class="desaprobado">
+                <h2>Fail</h2>
+              </span>
+            </label>
+            </input>
+          </div>
+        </div>
+      </li>
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+  function onChange() {
+    if (document.getElementById("toogle1").checked) {
+      console.log("#False");
+      var div = document.getElementById('devs1');
+      div.style.backgroundColor = "rgba(239, 71, 111, 1)";
+    }
+    else {
+      console.log("#True");
+      var div = document.getElementById('devs1');
+      div.style.backgroundColor = "rgba(6, 214, 160, 1)";
+
+    }
+    if (document.getElementById("toogle2").checked) {
+      console.log("#False");
+      var div = document.getElementById('devs2');
+      div.style.backgroundColor = "rgba(239, 71, 111, 1)";
+    }
+    else {
+      console.log("#True");
+      var div = document.getElementById('devs2');
+      div.style.backgroundColor = "rgba(6, 214, 160, 1)";
+
+    }
+    if (document.getElementById("toogle3").checked) {
+      console.log("#False");
+      var div = document.getElementById('devs3');
+      div.style.backgroundColor = "rgba(239, 71, 111, 1)";
+    }
+    else {
+      console.log("#True");
+      var div = document.getElementById('devs3');
+      div.style.backgroundColor = "rgba(6, 214, 160, 1)";
+
+    }
+  }
+</script>

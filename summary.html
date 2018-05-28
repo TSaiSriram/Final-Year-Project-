@@ -1,0 +1,161 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../scoreboard/css/bootstrap.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    </script>
+
+</head>
+<script>
+    $(document).ready(function () {
+        var json = [{ "sno": 5, "name": "B Chinnodu", "gender": "Male", "image": { "type": "Buffer", "data": [] }, "wtcat": 66, "bodywt": 62, "eorue": "UE", "lotno": "UE665", "state": "AP", "district": "vizag", "s1": 65, "s1s": null, "s2": null, "s2s": null, "s3": null, "s3s": null, "sb": null, "b1": 65, "b1s": null, "b2": null, "b2s": null, "b3": null, "b3s": null, "st": null, "d1": 64, "d1s": null, "d2": null, "d2s": null, "d3": null, "d3s": null, "gt": null, "wp": null, "rank": null }, { "sno": 6, "name": "k Ganesh", "gender": "Male", "image": { "type": "Buffer", "data": [] }, "wtcat": 66, "bodywt": 61, "eorue": "UE", "lotno": "UE666", "state": "AP", "district": "vizag", "s1": 54, "s1s": null, "s2": null, "s2s": null, "s3": null, "s3s": null, "sb": null, "b1": 45, "b1s": null, "b2": null, "b2s": null, "b3": null, "b3s": null, "st": null, "d1": 55, "d1s": null, "d2": null, "d2s": null, "d3": null, "d3s": null, "gt": null, "wp": null, "rank": null }];
+        var tr;
+        for (var i = 0; i < json.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + json[i].lotno + "</td>");
+            tr.append("<td><h4 style='text-transform: uppercase;'>" + json[i].name + "</h4></td>");
+            tr.append("<td>" + json[i].state + "</td>");
+            tr.append("<td>" + json[i].district + "</td>");
+            tr.append("<td>" + json[i].wtcat + "</td>");
+            tr.append("<td>" + json[i].bodywt + "</td>");
+            tr.append("<td>" + json[i].s1 + "</td>");
+            tr.append("<td>" + json[i].s2 + "</td>");
+            tr.append("<td>" + json[i].s3 + "</td>");
+            tr.append("<td>" + json[i].sb + "</td>");
+            tr.append("<td>" + json[i].b1 + "</td>");
+            tr.append("<td>" + json[i].b2 + "</td>");
+            tr.append("<td>" + json[i].b3 + "</td>");
+            tr.append("<td>" + json[i].st + "</td>");
+            tr.append("<td>" + json[i].d1 + "</td>");
+            tr.append("<td>" + json[i].d2 + "</td>");
+            tr.append("<td>" + json[i].d3 + "</td>");
+            tr.append("<td>" + json[i].gt + "</td>");
+            tr.append("<td>" + json[i].wp + "</td>");
+            tr.append("<td>" + json[i].rank + "</td>");
+            tr.append("<td>" + json[i].points + "</td>");
+            $('table').append(tr);
+        }
+    });
+
+
+
+</script>
+<style>
+    #big {
+        background: #bdbaba;
+    }
+
+    body {
+        background: rgb(189, 186, 186);
+        background: radial-gradient(circle, rgba(189, 186, 186, 1) 0%, rgba(9, 12, 41, 1) 90%);
+    }
+
+    th {
+        font-size: 25;
+    }
+
+    td {
+        font-size: 20;
+    }
+</style>
+
+<body>
+    <table id="big" style="width : 100%" border="1">
+        <tr>
+            <th colspan="40">
+                <center>
+                    <h3>Summary</h3>
+                </center>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="6">
+                Group
+            </th>
+            <th colspan="4">
+                Squat
+            </th>
+            <th colspan="4">
+                Bench Press
+            </th>
+            <th colspan="4">
+                Dead Lift
+            </th>
+        </tr>
+        <tr>
+
+            <th>
+                Lotno
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                State
+            </th>
+            <th>
+                District
+            </th>
+            <th>
+                wtcat
+            </th>
+            <th>
+                Body wt
+            </th>
+            <th>
+                SQ1
+            </th>
+            <th>
+                SQ2
+            </th>
+            <th>
+                SQ3
+            </th>
+            <th>
+                SB
+            </th>
+            <th>
+                BP1
+            </th>
+            <th>
+                BP2
+            </th>
+            <th>
+                BP2
+            </th>
+            <th>
+                ST
+            </th>
+            <th>
+                DL1
+            </th>
+            <th>
+                DL2
+            </th>
+
+            <th>
+                DL3
+            </th>
+
+            <th>
+                TOT
+            </th>
+
+            <th>
+                WP
+            </th>
+
+            <th>
+                RANK
+
+            </th>
+            <th>
+                POINTS
+
+            </th>
+
+        </tr>
+</body>
+</table>
+
+</html>

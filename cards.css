@@ -1,0 +1,123 @@
+body {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #f2f2f2;
+    perspective: 1200px;
+    font-family: sans-serif;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body, .layerOne, .icons{
+    display: flex;
+  }
+  
+  body,.layerOne {
+    align-items: center;
+  }
+  
+  .layerOne, .layerOne * {
+    transform-style: preserve-3d;
+  }
+  
+  
+  .customToggle {
+    display: none;
+  }
+  .layerOne {
+    flex-direction: column;
+    color: #4B0082;
+    position: relative;
+    background-color :  rgba(239, 71, 111, 1);
+    z-index: 2;
+  }
+  
+  .card, .layerOne {
+    width: 300px;
+    height: 300px;
+    border-radius: 1em;
+  }
+  
+  
+  /*
+  Hower Effects starts here !!
+  */
+  
+  /* Some Resets */
+  
+  body, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  body, ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ul {
+    margin-top: 5em;
+    flex-wrap: wrap;
+    max-width: 40em;
+  }
+  
+  li {
+    transition: transform .5s;
+  }
+  
+  div {
+    margin: 2em;
+    width: 15em;
+    height: 10em;
+    position: relative;
+  }
+  
+  /* These are the main colors, Try changing yourself to test */
+  
+  /*
+  The transform is implemented on the wrapper,
+  so the ::after class can maintain the z-index.
+  If it was implemented on the div,
+  it would cause the ::after to move up the stack on hover state.
+  */
+  
+  li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  /*
+  The trend for these colorful shadows,
+  are designed in a slightly different way.
+  They are NOT the standard drop shadows.
+  In tools like Sketch and Photoshop,
+  a rectangle less than the total width of the element,
+  is placed behind it, and then,
+  the drop shadow is implemented on that rectangle.
+  */
+  
+  div::after {
+    z-index: -1;
+    content: '';
+    background: inherit;
+    opacity: 0;
+    height: 20%;
+    width: 0%;
+    position: absolute;
+    margin-left: auto; margin-right: auto;
+    bottom: 0;
+    filter: blur(.9em);
+    transition: opacity 1s, bottom 0.5s;
+  }
+  
+  div:hover::after {
+    opacity: .85;
+    bottom: -.75em;
+  }

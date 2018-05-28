@@ -1,0 +1,220 @@
+<html>
+<form method="POST" action="/nt">
+  <center>
+    <h1 style="font-size:36px;color:blue;font-family: 'style-serif';">
+      <center></center>
+    </h1>
+    <button name="nt">New Event</button>
+  </center>
+</form>
+<style>
+  h1,
+  h2 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+<link rel="stylesheet" href="../public/css/bootstrap.css">
+<form id="colors" method="POST" class="formRegister" action="/reg">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <script>
+    $(document).ready(function () {
+      // Initializing arrays with city names.
+      console.log("Hello");
+      var Male = [
+        { display: "53", value: "53" },
+        { display: "59", value: "59" },
+        { display: "66", value: "66" },
+        { display: "74", value: "74" },
+        { display: "83", value: "83" },
+        { display: "93", value: "93" },
+        { display: "105", value: "105" },
+        { display: "120", value: "120" },
+        { display: "120+", value: "120+" }];
+      var Female = [
+        { display: "43", value: "43" },
+        { display: "47", value: "47" },
+        { display: "52", value: "52" },
+        { display: "57", value: "57" },
+        { display: "63", value: "63" },
+        { display: "72", value: "72" },
+        { display: "84", value: "84" },
+        { display: "84+", value: "84+" }];
+      // Function executes on change of first select option field.
+      $("#gender").change(function () {
+        var select = $("#gender option:selected").val();
+        switch (select) {
+          case "Male":
+            city(Male);
+            break;
+          case "Female":
+            city(Female);
+            break;
+        }
+      });
+      // Function To List out Cities in Second Select tags
+      function city(arr) {
+        $("#weight").empty(); //To reset cities
+        $("#weight").append("<option>--Select--</option>");
+        $(arr).each(function (i) { //to list cities
+          $("#weight").append("<option value=\"" + arr[i].value + "\">" + arr[i].display + "</option>");
+          console.log("Data Changed");
+        });
+      }
+    });
+  </script>
+  <style>
+    body {
+      margin: 0;
+      background: #1d253d;
+    }
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: rgba(255, 255, 255, 0.50);
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: rgba(255, 255, 255, 0.50);
+    }
+
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: rgba(255, 255, 255, 0.50);
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: rgba(255, 255, 255, 0.50);
+    }
+
+    .formRegister {
+      width: 100%;
+      margin: 50px auto 0;
+      background: #222a43;
+      padding: 62px;
+    }
+
+    .formRegister .inputWrapper {
+      background-color: #2a334c;
+      padding: 10px 30px;
+      position: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      background: transparent;
+      border: 1;
+      color:#fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+
+
+    button {
+      width: 15%;
+      box-shadow: none;
+      background: #00a7ff;
+      border: none;
+      position: relative;
+      padding: 10px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    body {
+      background: rgb(51, 97, 198);
+      background: linear-gradient(0deg, rgba(51, 97, 198, 1) 10%, rgba(176, 51, 168, 1) 100%);
+    }
+  </style>
+  <br>
+  <h1 style="font-size:36px;color:blue;font-family: 'style-serif';">
+    <center>REGISTRATION</center>
+    <br>
+  </h1>
+  <center>
+    Name:&nbsp;
+    <input type="text" style="width: 30%" name="name" placeholder="Your name" required/>
+
+    <br>
+    <br>
+    <br> Gender:
+    <select name=gender id="gender" required>
+      <br>
+      <option>--Select--</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    &nbsp;&nbsp;&nbsp; Weight:
+    <select name="wtcat" id="weight" required>
+    </select>Body Wt :
+    <input type="text" name="bodywt" style="width: 20%" ; placeholder="Body weight" required>
+    <br>
+    <br>
+    <br>
+    <input type="radio" name="eorue" value="E" required />Equipped
+    <input type="radio" name="eorue" value="UE" required />UN-Equipped
+    <br>
+    <br>
+    <br> State:
+    <select name="state" style="width:15%" required>
+        <option>--Select--</option>
+      <option value="AP">ap</option>
+      <option value="UP">up</option>
+      <option value="AK">ak</option>
+      <option value="CC">cc</option>
+      <option value="KK">kk</option>
+    </select>
+    District:
+    <select name="dist" style="width:15%" required>
+        <option>--Select--</option>
+      <option value="vizag">vizag</option>
+      <option value="anakapalli">anakapalli</option>
+      <option value="varangal">varangal</option>
+      <option value="srikakulam">srikakulam</option>
+      <option value="nelluru">nelluru</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <h2 style="font-size:36px;color:blue;font-family:'style:serif';">
+      <center>OPENING CALLS</center>
+      <br>
+    </h2>
+    Squat:
+    <input type="text" name="s1" placeholder="SQUAT" required /> Bench press:
+    <input type="text" name="b1" placeholder="BENCH PRESS" required /> Dead lift:
+    <input type="text" name="d1" placeholder="DEAD LIFT" required />
+    <br>
+    <br>
+    <br>
+    <button class="button" name="reg">
+      <span>Get Registered</span>
+    </button>
+  </center>
+</form>
+<br>
+
+<form method="POST" action="/lotnosb">
+  <center>
+    <button name="lotnosb">Scoreboard</center>
+  </button>
+</form>
+
+<br>
+
+<form method="POST" action="/sumroute">
+  <center>
+    <button name="sumroute">Summary</button>
+  </center>
+</form>
+
+</html>

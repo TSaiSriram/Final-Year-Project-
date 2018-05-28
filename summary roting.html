@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../public/css/w3.css">
+  <meta name="robots" content="noindex, nofollow">
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Initializing arrays with city names.
+      console.log("Hello");
+      var Male = [
+        { display: "53", value: "53" },
+        { display: "59", value: "59" },
+        { display: "66", value: "66" },
+        { display: "74", value: "74" },
+        { display: "83", value: "83" },
+        { display: "93", value: "93" },
+        { display: "105", value: "105" },
+        { display: "120", value: "120" },
+        { display: "120+", value: "120+" }];
+      var Female = [
+        { display: "43", value: "43" },
+        { display: "47", value: "47" },
+        { display: "52", value: "52" },
+        { display: "57", value: "57" },
+        { display: "63", value: "63" },
+        { display: "72", value: "72" },
+        { display: "84", value: "84" },
+        { display: "84+", value: "84+" }];
+      // Function executes on change of first select option field.
+      $("#gender").change(function () {
+        var select = $("#gender option:selected").val();
+        switch (select) {
+          case "Male":
+            city(Male);
+            break;
+          case "Female":
+            city(Female);
+            break;
+        }
+      });
+      // Function To List out Cities in Second Select tags
+      function city(arr) {
+        $("#weight").empty(); //To reset cities
+        $("#weight").append("<option>--Select--</option>");
+        $(arr).each(function (i) { //to list cities
+          $("#weight").append("<option value=\"" + arr[i].value + "\">" + arr[i].display + "</option>");
+          console.log("Data Changed");
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <br>
+      <br>
+      <br>
+      <form method="POST" action="/sum">
+        <style>
+          body {
+            background: rgb(47,49,72);
+background: radial-gradient(circle, rgba(47,49,72,1) 50%, rgba(189,186,186,1) 100%);
+          }
+
+          .card {
+            box-shadow: rgb(51, 97, 198);;
+            transition: 0.3s;
+            width: 100%;
+            border-radius:25px;
+            align-content: center;
+            background: rgb(47,49,72);
+background: radial-gradient(circle, rgba(47,49,72,1) 0.1%, rgba(189,186,186,1) 100%);
+          }
+
+          .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          }
+          
+        </style>
+
+        <div class="card">
+          <center>
+            <br>
+            <h1>Summary</h1>
+          </center>
+          <br>
+          <br>
+          <center>
+            <h4>
+              <input type="radio" value="UE" name="eorue" required> &nbsp;Un-Equipped
+              <input type="radio" value="E" name="eorue" required>&nbsp;Equipped &nbsp;
+            </h4>
+            <br>
+            <br>
+            <div id="prm">
+              <h3>Gender:</h3>
+              <br>
+              <h5>
+                <select name=gender id="gender" required>
+                  <br>
+                  <option>--Select--</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </h5>
+              <br>
+              <br>
+              <center>
+                <h3>Weight Category:</h3>
+                <center>
+                  <br>
+                  <h5>
+                    <select name=wtcat id="weight" required>
+
+                    </select>
+                  </h5>
+                </center>
+              </center>
+              <br>
+              <br>
+              <center>
+                <h4>
+                  <button ng-click="Finish()">Finish</button>
+                </h4>
+                <br>
+              </center>
+            </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
